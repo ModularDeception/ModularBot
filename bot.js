@@ -26,15 +26,4 @@ client.on('ready', () => {
   }
 });
 
- client.on('message', message => {
-  if (message.content === 'm!help') {    
-case "embed":
-    var embed = new Discord.RichEmbed()
-    .addField("Title", "Description")
-    message.channel.send({embed});
-        // .catch(console.error);
-    break;
-  }
-});
-
 client.login(process.env.BOT_TOKEN);
