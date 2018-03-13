@@ -26,23 +26,4 @@ client.on('ready', () => {
   }
 });
 
-message.channel.send({embed: {
-    color: 3447003,
-    author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
-    },
-    fields: [{
-        name: "Fun Commands",
-        value: "cookie, avatar, ping"
-      },
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "© Example"
-    }
-  }
-});
-
 client.login(process.env.BOT_TOKEN);
