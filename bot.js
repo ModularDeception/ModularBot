@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'm!avatar') {
+    if (message.content === 'm!ping') {
     	message.reply('pong');
   	}
 });
