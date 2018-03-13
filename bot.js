@@ -44,4 +44,11 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "react")) {
+    message.reply('test');
+    message.react('🤔')
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
