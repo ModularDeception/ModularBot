@@ -32,10 +32,16 @@ client.on('message', message => {
     .addField("m!help", "Shows command list")
     .addField("m!cookie", "Gives you a cookie :3")
     .addField("m!ping", "Gives you a pong to your ping")
-    .addField("m!avatar", "Shows your avatar")
+    .addField("m!avatar", "Shows your avatar")        
+    .addField("m!invite", "Gives you the invite link to add me to your server")
     message.channel.send({embed})
   }
 });
 
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "invite")) {
+    message.reply('Invite me to your server senpai :3 rebrand.ly/ModularBot');
+  }
+});
 
 client.login(process.env.BOT_TOKEN);
