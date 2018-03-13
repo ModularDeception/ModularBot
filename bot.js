@@ -10,5 +10,15 @@ client.on('message', message => {
     	message.reply('pong');
   	}
 });
+client.on('ready', () => {
+  console.log('I am ready!');
+});
+
+ client.on('message', message => {
+  if (message.content === 'what is my avatar') {
+    message.reply(message.author.avatarURL);
+  }
+});
+
 
 client.login(process.env.BOT_TOKEN);
