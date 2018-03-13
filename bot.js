@@ -27,7 +27,7 @@ client.on('message', message => {
  client.on('message', message => {
   if (message.content.startsWith(prefix + "help")) {
     const embed = new Discord.RichEmbed()
-    .setColor(FFC0CB)
+    .setColor(3447003)
     .setTitle("Command List:")
     .addField("m!help", "Shows command list")
     .addField("m!cookie", "Gives you a cookie :3")
