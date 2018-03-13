@@ -40,7 +40,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content.startsWith(prefix + "invite")) {
-    message.reply('Invite me to your server senpai :3 rebrand.ly/ModularBot');
+    message.reply('Invite me to your server senpai :3 https://rebrand.ly/ModularBot');
   }
 });
 
