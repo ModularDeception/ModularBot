@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "m!";
-const embed = new Discord.RichEmbed()
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -27,6 +26,7 @@ client.on('message', message => {
 
  client.on('message', message => {
   if (message.content.startsWith(prefix + "help")) {
+    const embed = new Discord.RichEmbed()
     .setColor(FFC0CB)
     .setTitle("Command List:")
     .addField("m!help", "Shows command list")
