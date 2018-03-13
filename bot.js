@@ -4,10 +4,6 @@ const prefix = "m!";
 
 client.on('ready', () => {
     console.log('I am ready!');
-    var opts = {
-        name: 'with depression',
-        url: 'https://www.twitch.tv/monstercat',
-        type: 1
 });
 
 client.on('message', message => {
