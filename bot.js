@@ -24,4 +24,18 @@ client.on('message', message => {
   }
 });
 
+ client.on('message', message => {
+  if (message.content.startsWith(prefix + "help")) {
+    const embed = new Discord.RichEmbed()
+    .setColor(FFC0CB)
+    .setTitle("Command List:")
+    .addField("m!help", "Shows command list")
+    .addField("m!cookie", "Gives you a cookie :3")
+    .addField("m!ping", "Gives you a pong to your ping")
+    .addField("m!avatar", "Shows your avatar")
+    message.channel.send({embed})
+  }
+});
+
+
 client.login(process.env.BOT_TOKEN);
