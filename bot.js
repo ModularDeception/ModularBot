@@ -20,5 +20,11 @@ client.on('ready', () => {
   }
 });
 
+ client.on('message', message => {
+  if (message.content === 'm!cookie') {
+    message.reply('Have a cookie :cookie:');
+  }
+});
+
 
 client.login(process.env.BOT_TOKEN);
