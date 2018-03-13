@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "m!";
+client.user.setPresence({ game: { name: 'with depression', type: http://twitch.tv/monstercat } });
 
 client.on('ready', () => {
     console.log('I am ready!');
