@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "m!";
+const user_id = evt.message.author.id;
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -47,6 +48,17 @@ client.on('message', message => {
 client.on('message', message => {
   if (message.content.startsWith(prefix + "react")) {
     message.react('🦆') 
+  }
+});
+
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "pizza")) {
+   if(!m.mentions[0]) {
+				message.reply("Missing User!");
+					return
+				}						
+	user = m.mentions[0]
+    message.channel.send(user_id + 'gave ' user + ' a piece of pizza :pizza:)
   }
 });
 
