@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "m!";
-const user_id = evt.message.author.id;
 
 client.on('ready', () => {
     console.log('I am ready!');
