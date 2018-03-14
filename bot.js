@@ -4,6 +4,7 @@ const prefix = "m!";
 
 client.on('ready', () => {
     console.log('I am ready!');
+    client.user.setActivity({game: {name: "with m!help", type: 0}});
 });
 
 client.on('message', message => {
@@ -46,7 +47,6 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content.startsWith(prefix + "react")) {
-    message.reply('test');
     message.react('🤔')
   }
 });
