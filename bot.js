@@ -20,7 +20,7 @@ client.on('message', message => {
 
  client.on('message', message => {
   if (message.content.startsWith(prefix + "cookie")) {
-  message.reply('Have a cookie :cookie');
+  message.reply('Have a cookie :cookie:');
   }
 });
 
