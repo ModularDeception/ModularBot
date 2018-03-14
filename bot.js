@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "m!";
+bot.user.setGame('with depression', 'https://www.twitch.tv/monstercat');
 
 client.on('ready', () => {
     console.log('I am ready!');
