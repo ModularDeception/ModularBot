@@ -4,7 +4,7 @@ const prefix = "m!";
 
 client.on('ready', () => {
     console.log('I am ready!');
-    bot.user.setGame('with depression', 'https://www.twitch.tv/monstercat');
+    client.user.setPresence({ game: { name: 'with depression' }, status: 'online' })
 });
 
 client.on('message', message => {
