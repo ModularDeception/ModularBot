@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "m!";
-let member = message.mentions.members.first();
-
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -22,6 +20,7 @@ client.on('message', message => {
 
  client.on('message', message => {
   if (message.content.startsWith(prefix + "cookie" + member)) {
+  let member = message.mentions.members.first();
   message.reply('${message.author} gave' member 'a cookie :cookie:');
   }
 });
