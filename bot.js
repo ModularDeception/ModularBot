@@ -24,7 +24,7 @@ client.on('message', message => {
   let member = message.mentions.members.first();
   if (!member) 
       return message.reply("I can't give no one a cookie")
-  message.send('${message.author.tag} gave ${member.user.tag} a cookie :cookie:');
+  message.channel.send('${message.author.tag} gave ${member.user.tag} a cookie :cookie:');
   }
 });
 
