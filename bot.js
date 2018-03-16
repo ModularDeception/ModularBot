@@ -6,13 +6,6 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-  async ready () {
-    this.bot.editStatus(null, {
-      name: 'with m!help',
-      type: 1,
-      url: 'https://www.twitch.tv/monstercat'
-    })
-
 client.on('message', message => {
   if (message.content.startsWith(prefix + "ping")) {
     message.reply('Pong!');
