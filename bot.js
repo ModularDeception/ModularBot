@@ -38,6 +38,7 @@ client.on('message', message => {
     .addField(":grinning: Basic Commands", "Help, Ping, Invite")
     .addField(":stuck_out_tongue: Fun Commands", "Cookie")
     .setFooter("Thank you for choosing ModularBot")
+    .setTimestamp()
     message.channel.send({embed})
   }
 });
