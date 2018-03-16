@@ -6,10 +6,12 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.user.setActivity("with m!help.", {
-        url: "https://twitch.tv/monstercat",
-        type: "STREAMING"
-    });
+  async ready () {
+    this.bot.editStatus(null, {
+      name: 'with m!help',
+      type: 1,
+      url: 'https://www.twitch.tv/monstercat'
+    })
 
 client.on('message', message => {
   if (message.content.startsWith(prefix + "ping")) {
