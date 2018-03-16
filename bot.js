@@ -32,10 +32,12 @@ client.on('message', message => {
   if (message.content.startsWith(prefix + "help")) {
     const embed = new Discord.RichEmbed()
     .setColor(0x9370db)
+    .setAuthor("ModularBot: Help", "https://i.imgur.com/Y9HlaCp.png")
     .setTitle("Command List:")
     .addField("Prefix", "m!")
     .addField(":grinning: Basic Commands", "Help, Ping, Invite")
     .addField(":stuck_out_tongue: Fun Commands", "Cookie")
+    .setFooter("Thank you for choosing ModularBot")
     message.channel.send({embed})
   }
 });
