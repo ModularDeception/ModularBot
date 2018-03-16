@@ -15,7 +15,10 @@ client.on('message', message => {
 
  client.on('message', message => {
   if (message.content.startsWith(prefix + "avatar")) {
-    message.reply(message.author.avatarURL);
+      let member = message.mentions.members.first();
+ if (!member) 
+    return message.reply(message.author.avatarURL);
+ message.channel.send(member.toString().avatarURL);
   }
 });
 
