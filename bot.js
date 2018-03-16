@@ -47,15 +47,5 @@ client.on('message', message => {
     message.reply('Invite me to your server friend https://rebrand.ly/ModularBot');
   }
 });
-
-client.on('message', message => {
-    if (message.content.startsWith(prefix + "meme")) {
-    var highest = 21;
-    var url = "https://www.sheshank.com/memes/" + Math.floor((Math.random() * highest) + 1) + ".jpg";
-    const embed = new Discord.RichEmbed()
-    .setImage(url);
-    message.channel.send({embed});
-  }
-});          
-
+        
 client.login(process.env.BOT_TOKEN);
