@@ -23,7 +23,7 @@ client.on('message', message => {
   let member = message.mentions.members.first();
   if (!member) 
       return message.reply("I can't give no one a cookie")
-  message.channel.send(message.author.toString() +  ' gave' + member.toString()  + ' a cookie :cookie:);
+  message.channel.send(message.author.toString() +  ' gave' + member.toString()  + ' a cookie :cookie:');
   }
 });
 
