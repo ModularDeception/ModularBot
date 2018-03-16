@@ -31,8 +31,9 @@ client.on('message', message => {
  client.on('message', message => {
   if (message.content.startsWith(prefix + "help")) {
     const embed = new Discord.RichEmbed()
-    .setColor(0x36393E)
+    .setColor(9933cc)
     .setTitle("Command List:")
+    .addField("Prefix m!")
     .addField(":grinning: Basic Commands", "Help, Ping, Invite")
     .addField(":stuck_out_tongue: Fun Commands", "Cookie")
     message.channel.send({embed})
