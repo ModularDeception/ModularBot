@@ -7,6 +7,11 @@ client.on('ready', () => {
     client.user.setPresence({ game: { name: 'with depression' }, status: 'online' })
 });
 
+client.user.setActivity("with m!help.", {
+        url: "https://twitch.tv/monstercat",
+        type: "STREAMING"
+    });
+
 client.on('message', message => {
   if (message.content.startsWith(prefix + "ping")) {
     message.reply('Pong!');
