@@ -21,7 +21,10 @@ client.on('message', message => {
 
  client.on('message', message => {
   if (message.content.startsWith(prefix + "cookie")) {
-  message.reply('Have a cookie :) :cookie:');
+  let member = message.mentions.members.first();
+  if (!member) 
+      return message.reply("I can't give no one a cookie")
+  message.reply('${message.author.tag} gave ${member.user.tag} a cookie :cookie:');
   }
 });
 
