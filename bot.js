@@ -35,7 +35,6 @@ client.on('message', message => {
     .setAuthor("ModularBot: Help", "https://i.imgur.com/Y9HlaCp.png")
     .setTitle("Command List:")
     .setDescription("Prefix: m!")
-    .addBlankField(true)
     .addField(":grinning: Basic Commands", "Help, Ping, Invite")
     .addField(":stuck_out_tongue: Fun Commands", "Cookie")
     .setFooter("Thank you for choosing ModularBot")
