@@ -33,11 +33,8 @@ client.on('message', message => {
     const embed = new Discord.RichEmbed()
     .setColor(3447003)
     .setTitle("Command List:")
-    .addField("m!help", "Shows command list")
-    .addField("m!cookie", "Gives someone a cookie")
-    .addField("m!ping", "Gives you a pong to your ping")
-    .addField("m!avatar", "Shows your avatar")        
-    .addField("m!invite", "Gives you the invite link to add me to your server")
+    .addField("Basic Commands", "help, ping, invite")
+    .addField("Fun Commands", "cookie")
     message.channel.send({embed})
   }
 });
