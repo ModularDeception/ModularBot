@@ -33,7 +33,7 @@ client.on('message', message => {
     const embed = new Discord.RichEmbed()
     .setColor(333399)
     .setTitle("Command List:")
-    .addField("Prefix m!", "  ")
+    .addField("Prefix", "m!")
     .addField(":grinning: Basic Commands", "Help, Ping, Invite")
     .addField(":stuck_out_tongue: Fun Commands", "Cookie")
     message.channel.send({embed})
