@@ -4,7 +4,6 @@ const prefix = "m!";
 
 client.on('ready', () => {
     console.log('I am ready!');
-    client.user.setPresence({ game: { name: 'with depression' }, status: 'online' })
 });
 
 client.user.setActivity("with m!help.", {
