@@ -4,6 +4,7 @@ const prefix = "m!";
 
 client.on('ready', () => {
     console.log('I am ready!');
+    client.user.setGame(`with m!help`);
 });
 
 client.on('message', message => {
@@ -43,7 +44,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content.startsWith(prefix + "invite")) {
-    message.reply('Invite me to your server senpai :3 https://rebrand.ly/ModularBot');
+    message.reply('Invite me to your server friend https://rebrand.ly/ModularBot');
   }
 });
 
