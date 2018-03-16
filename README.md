@@ -1,2 +1,1 @@
 # ModularBot
-Discord bot
