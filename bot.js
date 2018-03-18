@@ -2,6 +2,18 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "m!";
 
+function isAdmin(member) {
+    return member.hasPermission("ADMINISTRATOR");
+}
+
+function isKick(member) {
+    return member.hasPermission("KICK_MEMBERS");
+}
+
+function isBan(member) {
+    return member.hasPermission("BAN_MEMBERS");
+}
+
 client.on('ready', () => {
     console.log('I am ready!');
     client.user.setGame(`with m!help`);
