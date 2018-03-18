@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "m!";
-const ms = require("ms");
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -10,8 +9,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content.startsWith(prefix + "ping")) {
-    const m = await message.channel.send("Ping?");
-    m.edit(`Pong! Speed is ${m.createdTimestamp - message.createdTimestamp}ms. API speed is ${Math.round(client.ping)}ms`);
+     message.reply('Pong! :ping_pong:');
   	}
 });
 
