@@ -60,5 +60,13 @@ client.on('message', message => {
     message.reply('Invite me to your server friend https://rebrand.ly/ModularBot');
   }
 });
-        
+   
+client.on('message', message => {
+   if (message.content.startsWith(prefix + "say")) {
+    const sayMessage = args.join(" ");
+    message.delete().catch(O_o=>{});
+    message.channel.send(sayMessage);
+  }
+});
+    
 client.login(process.env.BOT_TOKEN);
