@@ -63,6 +63,7 @@ client.on('message', message => {
   }
 });
 
+client.on("message", async message => {
  if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use.
     // To get the "message" itself we join the `args` back into a string with spaces:
@@ -72,5 +73,6 @@ client.on('message', message => {
     // And we get the bot to say the thing:
     message.channel.send(sayMessage);
   }
-
+}
+          
 client.login(process.env.BOT_TOKEN);
