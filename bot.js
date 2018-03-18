@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "m!";
-var ms = require("ms");
+const ms = require("ms");
 
 client.on('ready', () => {
     console.log('I am ready!');
