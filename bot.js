@@ -61,4 +61,35 @@ client.on('message', message => {
   }
 });
        
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "kick")) {
+    if(!message.member.hasPermission("KICK_MEMBERS")) {
+        return message.reply("Sorry, you don't have permissions to use this.");
+    }
+
+    let member = message.mentions.members.first();
+    if(!member)
+      return message.reply("That user does not exist.");
+    if(!member.kickable)
+      return message.reply("User was not kicked. Make sure that I have kick members permissions, and that the user is kick able.");
+    let reason = args.slice(1).join(' ');
+    if(!reason)
+      return message.reply("Please indicate a reason for the kick.");
+    try {
+      message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
+    }
+    catch (e) {
+      console.log(e);
+    }
+    try {
+      message.mentions.members.first().user.sendMessage("You have been kicked from "+ message.channel.guild.name + ". Remember you can still join back with an invite link!");
+    }
+    catch (e) {
+      console.log(e);
+    }
+    await member.kick(reason)
+      .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
