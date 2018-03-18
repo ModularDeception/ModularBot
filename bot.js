@@ -49,18 +49,4 @@ client.on('message', message => {
   }
 });
         
-function food() {
-    var rand = [‘🍏’, ‘🍎’, ‘🍐’, ‘🍊’, ‘🍋’, ‘🍌’, ‘🍉’, ‘🍇’, ‘🍓’, ‘🍈’, ‘🍒’, ’🍍’, ‘🥝’, ‘🥑’, ‘🍅’, ‘🥕’, ‘🌽’,  ‘🥔’, ‘🥜’, ‘🍯’, ‘🥐’, ‘🍞’, ‘🥖’, ‘🧀’, ‘🥚’, ‘🍳’, ‘🥓’, ‘🥞’,  ‘🍤’, ‘🍗’, ‘🍖’, ‘🍕’, ‘🌭’, ‘🍔’, ‘🍟’, ‘🥙’, ‘🌮’, ‘🌯’, ‘🍝’,  ‘🍧’, ‘🍨’, ‘🍦’, ‘🍰’, ‘🎂’, ‘🍫’, ‘🍿’, ‘🍩’, ‘🍪’,];
-    return rand[Math.floor(Math.random()*rand.length)];
-}
-
- client.on('message', message => {
-  if (message.content.startsWith(prefix + "food")) {
-  let member = message.mentions.members.first();
-  if (!member) 
-      return message.reply("I can't give no one food")
-  message.channel.send(message.author.toString() +  ' gave ' + member.toString()  + ' a ' + food());
-  }
-});
-
 client.login(process.env.BOT_TOKEN);
