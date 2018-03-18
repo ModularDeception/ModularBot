@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const Attachment = require("discord.js").Attachment;
 const client = new Discord.Client();
-const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-const command = args.shift().toLowerCase();
 
 function isAdmin(member) {
     return member.hasPermission("ADMINISTRATOR");
