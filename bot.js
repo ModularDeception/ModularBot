@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const Attachment = require("discord.js").Attachment;
 const client = new Discord.Client();
+const prefix = "m!";
 
 function isAdmin(member) {
     return member.hasPermission("ADMINISTRATOR");
