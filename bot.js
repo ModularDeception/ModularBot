@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const Attachment = require("discord.js").Attachment;
 const client = new Discord.Client();
 const prefix = "m!";
-const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const args = message.content.slice(prefix).trim().split(/ +/g);
 var ms = require("ms");
 
 function isAdmin(member) {
