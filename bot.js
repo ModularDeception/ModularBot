@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const Attachment = require("discord.js").Attachment;
 const client = new Discord.Client();
 const prefix = "m!";
+const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 var ms = require("ms");
 
 function isAdmin(member) {
@@ -63,4 +64,12 @@ client.on('message', message => {
   }
 });
    
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "say")) {
+    const sayMessage = args.join(" ");
+    message.delete().catch(O_o=>{});
+    message.channel.send(sayMessage);
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
