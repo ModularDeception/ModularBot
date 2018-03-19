@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const Attachment = require("discord.js").Attachment;
 const client = new Discord.Client();
 const prefix = "m!";
-const args = message.content.slice(prefix).trim().split(/ +/g);
 var ms = require("ms");
 
 function isAdmin(member) {
@@ -61,14 +60,6 @@ client.on('message', message => {
 client.on('message', message => {
   if (message.content.startsWith(prefix + "invite")) {
     message.reply('Invite me to your server friend https://rebrand.ly/ModularBot');
-  }
-});
-   
-client.on('message', message => {
-  if (message.content.startsWith(prefix + "say")) {
-    const sayMessage = args.join(" ");
-    message.delete().catch(O_o=>{});
-    message.channel.send(sayMessage);
   }
 });
 
