@@ -64,4 +64,21 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "info")) {
+    const embed = new Discord.RichEmbed()
+    .setColor(0x9370db)
+    .setAuthor("ModularBot: Info", "https://i.imgur.com/Y9HlaCp.png")
+    .setTitle("Info:")
+    .setDescription("Have any ideas or would like to help contribute? Email me at ModularDeception@gmail.com")
+    .addField("Prefix: m!")
+    .addField("Version", "Version 1.2")
+    .addField("Creator", "Modular#0001")
+    .setFooter("Thank you for choosing ModularBot")
+    .setTimestamp()
+    .setThumbnail("https://i.imgur.com/Y9HlaCp.png")
+    message.channel.send({embed})
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
