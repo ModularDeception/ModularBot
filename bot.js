@@ -52,6 +52,7 @@ client.on('message', message => {
     .addField(":grinning: Basic Commands", "Help, Invite")
     .addField(":stuck_out_tongue: Fun Commands", "Ping")
     .addField(":fork_knife_plate: Food Commands", "Cookie")
+    .addField(":tools: Helpful Commands", "Info")
     .setFooter("Thank you for choosing ModularBot")
     .setTimestamp()
     message.channel.send({embed})
