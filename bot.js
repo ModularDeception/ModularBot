@@ -72,7 +72,6 @@ client.on('message', message => {
     .setAuthor("ModularBot: Info", "https://i.imgur.com/Y9HlaCp.png")
     .setTitle("Info:")
     .setDescription("Have any ideas or would like to help contribute? Email me at ModularDeception@gmail.com")
-    .addField("Prefix: m!")
     .addField("Version", "Version 1.2")
     .addField("Creator", "Modular#0001")
     .setFooter("Thank you for choosing ModularBot")
