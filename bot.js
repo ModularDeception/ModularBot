@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const Attachment = require("discord.js").Attachment;
 const client = new Discord.Client();
 const prefix = "m!";
+let msg = message.content.toUpperCase();
 var ms = require("ms");
 
 function isAdmin(member) {
@@ -81,4 +82,7 @@ client.on('message', message => {
   }
 });
 
+   if (msg === prefix + 'HI') {
+       message.channel.send('hey')
+   }
 client.login(process.env.BOT_TOKEN);
