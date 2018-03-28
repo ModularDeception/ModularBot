@@ -86,7 +86,7 @@ client.on('message', message => {
     const embed = new Discord.RichEmbed()
     .setColor(0x9370db)
     .setAuthor("ModularBot: Info", "https://i.imgur.com/Y9HlaCp.png")
-    .addField("https://random.birb.pw/tweet/random")
+    .setImage("https://random.birb.pw/tweet/random")
     .setFooter("Powered by random.birb.pw")
     .setTimestamp()
     message.channel.send({embed})
