@@ -85,7 +85,7 @@ client.on('message', message => {
   if (message.content.startsWith(prefix + "birb")) {
     const embed = new Discord.RichEmbed()
     .setColor(0x9370db)
-    .setAuthor("ModularBot: Info", "https://i.imgur.com/Y9HlaCp.png")
+    .setAuthor("ModularBot: Birb", "https://i.imgur.com/Y9HlaCp.png")
     .setImage("https://random.birb.pw/tweet/random")
     .setFooter("Powered by random.birb.pw")
     .setTimestamp()
