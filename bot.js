@@ -81,4 +81,16 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "birb")) {
+    const embed = new Discord.RichEmbed()
+    .setColor(0x9370db)
+    .setAuthor("ModularBot: Info", "https://i.imgur.com/Y9HlaCp.png")
+    .addField("https://random.birb.pw/tweet/random")
+    .setFooter("Powered by random.birb.pw")
+    .setTimestamp()
+    message.channel.send({embed})
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
