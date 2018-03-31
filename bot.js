@@ -50,7 +50,7 @@ client.on('message', message => {
     .setTitle("Command List:")
     .setDescription("Prefix: m!")
     .addField(":grinning: Basic Commands", "Help, Invite")
-    .addField(":stuck_out_tongue: Fun Commands", "Ping")
+    .addField(":stuck_out_tongue: Fun Commands", "Ping, Hypesquad")
     .addField(":fork_knife_plate: Food Commands", "Cookie")
     .addField(":tools: Helpful Commands", "Info, Avatar")
     .setFooter("Thank you for choosing ModularBot")
