@@ -93,4 +93,16 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "hypesquad")) {
+    const embed = new Discord.RichEmbed()
+    .setColor(0x9370db)
+    .setAuthor("ModularBot: Hypesquad", "https://i.imgur.com/Y9HlaCp.png")
+    .setImage("https://i.imgur.com/HQXWre3.png")
+    .setFooter("Thank you for choosing ModularBot")
+    .setTimestamp()
+    message.channel.send({embed})
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
