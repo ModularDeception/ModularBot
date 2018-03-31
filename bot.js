@@ -50,7 +50,7 @@ client.on('message', message => {
     .setTitle("Command List:")
     .setDescription("Prefix: m!")
     .addField(":grinning: Basic Commands", "Help, Invite")
-    .addField(":stuck_out_tongue: Fun Commands", "Ping, Hypesquad")
+    .addField(":stuck_out_tongue: Fun Commands", "Ping")
     .addField(":fork_knife_plate: Food Commands", "Cookie")
     .addField(":tools: Helpful Commands", "Info, Avatar")
     .setFooter("Thank you for choosing ModularBot")
@@ -93,16 +93,5 @@ client.on('message', message => {
   }
 });
 
-client.on('message', message => {
-  if (message.content.startsWith(prefix + "hypesquad")) {
-    const embed = new Discord.RichEmbed()
-    .setColor(0x9370db)
-    .setAuthor("ModularBot: Hypesquad", "https://i.imgur.com/Y9HlaCp.png")
-    .setImage("https://i.imgur.com/HQXWre3.png")
-    .setFooter("Thank you for choosing ModularBot")
-    .setTimestamp()
-    message.channel.send({embed})
-  }
-});
 
 client.login(process.env.BOT_TOKEN);
