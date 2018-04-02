@@ -71,7 +71,7 @@ client.on('message', message => {
     .setColor(0x9370db)
     .setAuthor("ModularBot: Info", "https://i.imgur.com/Y9HlaCp.png")
     .setTitle("Info:")
-    .setDescription("Have any ideas or would like to help contribute? Email me at ModularDeception@gmail.com")
+    .setDescription("Have any ideas or would like to help contribute? Email me at .com")
     .addField("Version", "Version 1.2")
     .addField("Creator", "Modular#0001")
     .setFooter("Thank you for choosing ModularBot")
