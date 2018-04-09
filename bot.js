@@ -95,7 +95,7 @@ client.on('message', message => {
 
 
  client.on('message', message => {
-  if (message.content.startsWith(prefix + "avatar2")) {
+  if (message.content.startsWith(prefix + "123")) {
      const embed = new Discord.RichEmbed()
     .setColor(0x9370db)
     .setAuthor("ModularBot: Avatar", "https://i.imgur.com/Y9HlaCp.png")
