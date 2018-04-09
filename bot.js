@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const Attachment = require("discord.js").Attachment;
 const client = new Discord.Client();
 const prefix = "m!";
-const what = client.emoji.get ("433000284323840001");
+const what = client.emojis.find("name", "what");
 var ms = require("ms");
 
 function isAdmin(member) {
