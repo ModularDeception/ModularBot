@@ -23,7 +23,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content.startsWith(prefix + "ping")) {
-     message.reply('Pong! :ping_pong:');
+     message.reply('Pong! <:Pingsock:433019097005948938>');
   	}
 });
 
