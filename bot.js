@@ -50,7 +50,7 @@ client.on('message', message => {
     .setTitle("Command List:")
     .setDescription("Prefix: m!")
     .addField(":grinning: Basic Commands", "Help, Invite")
-    .addField(":stuck_out_tongue: Fun Commands", "Ping, Birb, PandaCookie")
+    .addField(":stuck_out_tongue: Fun Commands", "Ping, Birb")
     .addField(":fork_knife_plate: Food Commands", "Cookie")
     .addField(":tools: Helpful Commands", "Info, Avatar")
     .setFooter("Thank you for choosing ModularBot")
@@ -90,13 +90,6 @@ client.on('message', message => {
     .setFooter("Powered by random.birb.pw")
     .setTimestamp()
     message.channel.send({embed})
-  }
-});
-
-client.on('message', message => {
-  if (message.content.startsWith(prefix + "pandacookie")) {
-  message.channel.send(':cookie:');
-  message.channel.send(`<a:gifpanda:394690251957731328>`);
   }
 });
 
