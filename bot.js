@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const Attachment = require("discord.js").Attachment;
 const client = new Discord.Client();
 const prefix = "m!";
-const what = client.emojis.find("name", "what");
 var ms = require("ms");
 
 function isAdmin(member) {
@@ -38,7 +37,7 @@ client.on('message', message => {
   if (message.content.startsWith(prefix + "cookie")) {
   let member = message.mentions.members.first();
   if (!member) 
-      return message.reply(`${what} I can't give no one a cookie`)
+      return message.reply(`<:what:433000284323840001> I can't give no one a cookie`)
   message.channel.send(message.author.toString() +  ' gave ' + member.toString()  + ' a cookie :cookie:');
   }
 });
