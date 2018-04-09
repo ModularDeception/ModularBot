@@ -93,4 +93,11 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "pandacookie")) {
+  message.channel.send(':cookie:');
+  message.channel.send(`<a:gifpanda:394690251957731328>`);
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
