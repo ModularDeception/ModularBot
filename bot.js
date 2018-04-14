@@ -93,4 +93,13 @@ client.on('message', message => {
   }
 });
 
+ client.on('message', message => {
+  if (message.content.startsWith(prefix + "knight")) {
+  let member = message.mentions.members.first();
+  if (!member) 
+      return message.reply(`<:what:433000284323840001> I can't knight no one`)
+  message.channel.send( ':crossed_swords: ' + member.toString()  + ' has been knighted :crossed_swords:');
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
