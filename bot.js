@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const Attachment = require("discord.js").Attachment;
 const client = new Discord.Client();
 const prefix = "m!";
+const snekfetch = require('snekfetch');
 var ms = require("ms");
 
 function isAdmin(member) {
