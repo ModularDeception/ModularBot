@@ -102,4 +102,18 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "cat")) {
+  let {body} = await snekfetch
+    .get('http://edgecats.net/random');
+
+    let catEmbed = new Discord.RichEmbed()
+    .setColor("#bd9a82")
+    .setTitle("Cat :cat:")
+    .setImage(body.url);
+
+    message.channel.send(catEmbed);
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
